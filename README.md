@@ -1,7 +1,3 @@
-Sure, here's the updated README section with the added note about the card section and frontend:
-
----
-
 # Financial Logger
 
 ## Overview
