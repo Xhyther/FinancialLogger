@@ -1,0 +1,55 @@
+﻿@model FinanceLogs.Models.History
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>History</h2>
+
+
+
+    <h4>Incomes</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var income in Model.Incomes)
+            {
+                <tr>
+                    <td>@income.Name</td>
+                    <td>@income.Description</td>
+                    <td>@income.Price</td>
+                    <td>@income.Date.ToString("MM/dd/yyyy")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h4>Expenses</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var expense in Model.Expenses)
+            {
+                <tr>
+                    <td>@expense.Name</td>
+                    <td>@expense.Description</td>
+                    <td>@expense.Price</td>
+                    <td>@expense.Date.ToString("MM/dd/yyyy")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
